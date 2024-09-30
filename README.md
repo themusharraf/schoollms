@@ -29,3 +29,14 @@ class Lesson(models.Model):
     def __str__(self):
         return f"Lesson on {self.date}"
 ```
+
+## Ma'lumotlar tuzilmasi:
+Student modeli: Talabalar haqidagi ma'lumotlarni saqlaydi.
+full_name: Talabaning to'liq ismi.
+Modul modeli: Har bir modulni ifodalaydi.
+name: Modulning nomi.
+Lesson modeli: Har bir dars uchun sana, studentlar ro'yxati, modullar ro'yxati va great ma'lumotini saqlaydi.
+date: Dars sanasi.
+students: Darsga qatnashayotgan talabalar ro'yxati (ko'plab studentlar bo'lishi mumkin).
+moduls: Ushbu darsga tegishli modullar ro'yxati (ko'p modullar bo'lishi mumkin).
+great: Dars natijasi yoki baho (standart holda null yoki bo'sh bo'lishi mumkin).
