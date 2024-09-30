@@ -64,5 +64,5 @@ class LessonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Lesson
-        fields = ['date', 'students', 'moduls', 'great']
+        fields = ['date', 'name', 'students', 'moduls', 'great']
 ```
