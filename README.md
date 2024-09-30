@@ -31,12 +31,13 @@ class Lesson(models.Model):
 ```
 
 ## Ma'lumotlar tuzilmasi:
-1. - Student modeli: Talabalar haqidagi ma'lumotlarni saqlaydi.
-- full_name: Talabaning to'liq ismi.
+1. - `Student` modeli: Talabalar haqidagi ma'lumotlarni saqlaydi.
+- `full_name`: Talabaning to'liq ismi.
 2. - Modul modeli: Har bir modulni ifodalaydi.
-- name: Modulning nomi.
+- `name`: Modulning nomi.
 3. - Lesson modeli: Har bir dars uchun sana, studentlar ro'yxati, modullar ro'yxati va great ma'lumotini saqlaydi.
-- date: Dars sanasi.
+- `date`: Dars sanasi.
+- `name`: Dars nomi.
 - `students`: Darsga qatnashayotgan talabalar ro'yxati (ko'plab studentlar bo'lishi mumkin).
-- moduls: Ushbu darsga tegishli modullar ro'yxati (ko'p modullar bo'lishi mumkin).
-- great: Dars natijasi yoki baho (standart holda null yoki bo'sh bo'lishi mumkin).
+- `moduls`: Ushbu darsga tegishli modullar ro'yxati (ko'p modullar bo'lishi mumkin).
+- ` great`: Dars natijasi yoki baho (standart holda null yoki bo'sh bo'lishi mumkin).
