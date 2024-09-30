@@ -44,3 +44,25 @@ class Lesson(models.Model):
 
 ## API serializers.py:
 API orqali ma'lumotlarni serializerlar orqali ko'rsatish uchun `serializers.py` faylini yaratishingiz mumkin:
+```python
+from rest_framework import serializers
+from .models import Student, Modul, Lesson
+
+class StudentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Student
+        fields = ['id', 'full_name']
+
+class ModulSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Modul
+        fields = ['id', 'name']
+
+class LessonSerializer(serializers.ModelSerializer):
+    students = StudentSerializer(many=True)
+    moduls = ModulSerializer(many=True)
+
+    class Meta:
+        model = Lesson
+        fields = ['date', 'students', 'moduls', 'great']
+```
