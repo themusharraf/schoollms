@@ -40,4 +40,4 @@ class Lesson(models.Model):
 - `name`: Dars nomi.
 - `students`: Darsga qatnashayotgan talabalar ro'yxati (ko'plab studentlar bo'lishi mumkin).
 - `moduls`: Ushbu darsga tegishli modullar ro'yxati (ko'p modullar bo'lishi mumkin).
-- ` great`: Dars natijasi yoki baho (standart holda null yoki bo'sh bo'lishi mumkin).
+- `great`: Dars natijasi yoki baho (standart holda null yoki bo'sh bo'lishi mumkin).
