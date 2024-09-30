@@ -41,3 +41,6 @@ class Lesson(models.Model):
 - `students`: Darsga qatnashayotgan talabalar ro'yxati (ko'plab studentlar bo'lishi mumkin).
 - `moduls`: Ushbu darsga tegishli modullar ro'yxati (ko'p modullar bo'lishi mumkin).
 - `great`: Dars natijasi yoki baho (standart holda null yoki bo'sh bo'lishi mumkin).
+
+## API serializers.py:
+API orqali ma'lumotlarni serializerlar orqali ko'rsatish uchun `serializers.py` faylini yaratishingiz mumkin:
