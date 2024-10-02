@@ -3,24 +3,25 @@ from django.contrib.auth.models import AbstractUser
 
 
 class BaseDate(models.Model):
-    """created va updated date ma'lumotlarini saqlash uchun abstract model"""
+    """created va updated date ma'lumotlarini saqlash uchun abstract model"""  # noqa
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
 
     class Meta:
         abstract = True
 
+
 class Class(BaseDate):
     name = models.CharField(max_length=255)
 
 
 class Science(BaseDate):
-    """Fanlar uchun model"""
+    """Fanlar uchun model"""  # noqa
     name = models.CharField(max_length=255)
 
 
 class Modul(BaseDate):
-    """Fanlarning modullarini saqlash uchun model"""
+    """Fanlarning modullarini saqlash uchun model"""  # noqa
     name = models.CharField(max_length=255)
     science = models.ForeignKey(Science, related_name='moduls', on_delete=models.CASCADE)
 
@@ -50,7 +51,7 @@ class Student(models.Model):
 
 
 class Lesson(BaseDate):
-    """Darslar uchun model"""
+    """Darslar uchun model"""  # noqa
 
     modul = models.ForeignKey(Modul, related_name='lessons', on_delete=models.PROTECT)  # get post
     name = models.CharField(max_length=255, null=True, blank=True)
@@ -63,10 +64,10 @@ class Lesson(BaseDate):
 
 
 class LessonSubmission(BaseDate):
-    """Darslarda o'quvchilarni baholash uchun model"""
+    """Darslarda o'quvchilarni baholash uchun model"""  # noqa
 
     student = models.ForeignKey(Student, related_name='grades',
-                                on_delete=models.PROTECT)  # 1 ta student uchun 1 ta baho
+                                on_delete=models.PROTECT)  # 1 ta student uchun 1 ta baho # noqa
     grade = models.CharField(max_length=5, null=True, blank=True, default=None)
     lesson = models.ForeignKey(Lesson, related_name='grades', on_delete=models.PROTECT)  # get post
 
