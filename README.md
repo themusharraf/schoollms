@@ -1,6 +1,6 @@
 # LMS API arxitekturasi
 
-## Modelar tuzilmasi:
+## Modelar tuzilmasi: Tez kunda
 ```python
 from django.db import models
 from django.contrib.auth.models import AbstractUser
